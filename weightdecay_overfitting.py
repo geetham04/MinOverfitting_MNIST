@@ -26,7 +26,7 @@ train_set, valid_set, train_labels_set, valid_labels_set = train_test_split(X_tr
 epochs = 100
 
 model = Sequential()    
-model.add(Dense(100, kernel_regularizer=regularizers.l2(0.0001))) 
+model.add(Dense(100, input_dim=784, kernel_regularizer=regularizers.l2(0.0001))) 
 model.add(Activation('tanh'))
 model.add(Dense(150, kernel_regularizer=regularizers.l2(0.0001))) 
 model.add(Activation('tanh'))
